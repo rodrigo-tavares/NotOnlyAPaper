@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('SourceSansPro-Bold.woff2') format('woff2'),
+    url('SourceSansPro-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('Poppins-Regular.woff2') format('woff2'),
+    url('Poppins-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('Poppins-Bold.woff2') format('woff2'),
+    url('Poppins-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('SourceSansPro-Regular.woff2') format('woff2'),
+    url('SourceSansPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('Poppins-SemiBold.woff2') format('woff2'),
+    url('Poppins-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}

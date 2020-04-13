@@ -26,10 +26,16 @@ module.exports = {
         exclude: /(node_modules)/,
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(woff|woff2)$/,
+        use: {
+          loader: 'url-loader',
+        },
+      },
+      {
+        test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: 'file-loader?name=[name].[ext]',
             options: {
               outputPath: commonPaths.imagesFolder,
             },
@@ -50,7 +56,7 @@ module.exports = {
     ],
   },
   serve: {
-    add: app => {
+    add: (app) => {
       app.use(convert(history()));
     },
     content: commonPaths.entryPath,
@@ -67,6 +73,7 @@ module.exports = {
     new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({
       template: commonPaths.templatePath,
+      favicon: './src/assets/favicon/favicon.ico',
     }),
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: 'async',
