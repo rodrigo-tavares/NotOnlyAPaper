@@ -7,6 +7,7 @@ import Style from './styles';
 import Main from './container/main';
 import FindUniversity from './container/find-university';
 import Footer from './components/footer';
+import ResultUniversity from './container/result-university';
 
 const GlobalStyle = createGlobalStyle`
   ${Style}
@@ -32,6 +33,7 @@ class App extends Component {
           <Route path="/">
             <Main />
             <FindUniversity />
+            <ResultUniversity />
           </Route>
         </Switch>
         <Footer />
