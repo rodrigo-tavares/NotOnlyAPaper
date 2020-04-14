@@ -3,21 +3,23 @@ import RightSideSVG from './../../../assets/images/right-side.svg';
 
 export const Container = styled.div`
   width: 100%;
+  background: linear-gradient(90deg, #f2ca35 50%, #ffffff 50%);
+`;
+
+export const SubContainer = styled.div`
+  width: 1100px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  justify-content: flex-start;
+  justify-content: space-between;
 `;
 
 export const LeftSide = styled.div`
-  background: #f2ca35;
   height: 100vh;
   width: 46%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 0 0 5.5rem;
 `;
 
 export const MainTitle = styled.h1`
@@ -30,7 +32,7 @@ export const MainTitle = styled.h1`
 export const SubTitle = styled.p`
   font-size: 16px;
   line-height: 24px;
-  max-width: 80%;
+  max-width: 90%;
   margin-bottom: 30px;
 `;
 
@@ -39,7 +41,7 @@ export const ButtonsContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 63%;
+  max-width: 70%;
 `;
 
 export const RightSide = styled.div`

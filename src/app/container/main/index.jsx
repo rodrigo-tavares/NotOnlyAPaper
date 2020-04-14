@@ -6,6 +6,7 @@ import {
   SubTitle,
   ButtonsContainer,
   RightSide,
+  SubContainer,
 } from './styles';
 import {
   ButtonPrimary,
@@ -14,22 +15,24 @@ import {
 
 const Main = () => (
   <Container>
-    <LeftSide>
-      <MainTitle>
-        Veja as avaliações
-        <br /> sobre universidades
-      </MainTitle>
-      <SubTitle>
-        NotOnlyAPaper é uma plataforma para te ajudar a tomar uma das decisões
-        mais importantes da sua vida e lembrar que não é apenas um papel. Avalie
-        sua universidade. Conheça outras universidades.
-      </SubTitle>
-      <ButtonsContainer>
-        <ButtonPrimary>contribua</ButtonPrimary>
-        <ButtonSecundary>login</ButtonSecundary>
-      </ButtonsContainer>
-    </LeftSide>
-    <RightSide />
+    <SubContainer>
+      <LeftSide>
+        <MainTitle>
+          Veja as avaliações
+          <br /> sobre universidades
+        </MainTitle>
+        <SubTitle>
+          NotOnlyAPaper é uma plataforma para te ajudar a tomar uma das decisões
+          mais importantes da sua vida e lembrar que não é apenas um papel.
+          Avalie sua universidade. Conheça outras universidades.
+        </SubTitle>
+        <ButtonsContainer>
+          <ButtonPrimary>contribua</ButtonPrimary>
+          <ButtonSecundary>login</ButtonSecundary>
+        </ButtonsContainer>
+      </LeftSide>
+      <RightSide />
+    </SubContainer>
   </Container>
 );
 

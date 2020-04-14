@@ -26,29 +26,16 @@ module.exports = {
         exclude: /(node_modules)/,
       },
       {
-        test: /\.(woff|woff2)$/,
-        use: {
-          loader: 'url-loader',
-        },
+        test: /\.(woff|woff2|eot|ttf)$/,
+        loader: 'url-loader?limit=100000',
       },
       {
-        test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
+        test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.wav$|\.mp3$/,
         use: [
           {
             loader: 'file-loader?name=[name].[ext]',
             options: {
               outputPath: commonPaths.imagesFolder,
-            },
-          },
-        ],
-      },
-      {
-        test: /\.(woff2|ttf|woff|eot)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              outputPath: commonPaths.fontsFolder,
             },
           },
         ],
