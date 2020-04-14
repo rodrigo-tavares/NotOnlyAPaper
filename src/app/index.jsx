@@ -5,6 +5,8 @@ import Header from './components/header';
 import { createGlobalStyle } from 'styled-components';
 import Style from './styles';
 import Main from './container/main';
+import FindUniversity from './container/find-university';
+import Footer from './components/footer';
 
 const GlobalStyle = createGlobalStyle`
   ${Style}
@@ -29,8 +31,10 @@ class App extends Component {
           </Route>
           <Route path="/">
             <Main />
+            <FindUniversity />
           </Route>
         </Switch>
+        <Footer />
         <GlobalStyle />
       </Router>
     );

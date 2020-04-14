@@ -5,7 +5,7 @@ import useWindowScrollPosition from '@rehooks/window-scroll-position';
 
 const Header = () => {
   const [change, setChange] = React.useState(false);
-  const changePosition = 300;
+  const changePosition = 120;
 
   let position = useWindowScrollPosition();
 
