@@ -8,6 +8,8 @@ import Main from './container/main';
 import FindUniversity from './container/find-university';
 import Footer from './components/footer';
 import ResultUniversity from './container/result-university';
+import Login from './container/login';
+import NotFound from './container/not-found';
 
 const GlobalStyle = createGlobalStyle`
   ${Style}
@@ -22,21 +24,23 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Header />
         <Switch>
           <Route path="/sobre">
-            <div>Sobre</div>
+            <Header />
+            <NotFound />
+            <Footer />
           </Route>
           <Route path="/login">
-            <div>Login</div>
+            <Login />
           </Route>
           <Route path="/">
+            <Header />
             <Main />
             <FindUniversity />
             <ResultUniversity />
+            <Footer />
           </Route>
         </Switch>
-        <Footer />
         <GlobalStyle />
       </Router>
     );

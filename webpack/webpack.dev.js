@@ -8,6 +8,7 @@ module.exports = {
     filename: '[name].js',
     path: commonPaths.outputPath,
     chunkFilename: '[name].js',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -33,6 +34,7 @@ module.exports = {
   devServer: {
     contentBase: commonPaths.outputPath,
     compress: true,
+    historyApiFallback: true,
     hot: true,
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],

@@ -11,13 +11,16 @@ import {
   UniversityInfoTitle,
   RatingCountText,
   RatingContent,
+  RatingCategory,
+  ViewUniversityDetail,
+  ArrowLinkDetail,
 } from './styles';
 import FiapLogo from './../../../assets/images/fiap-logo.png';
 
 const BorderLinearProgress = withStyles({
   root: {
-    width: 100,
-    height: 10,
+    width: 150,
+    height: 7,
     borderRadius: 10,
     backgroundColor: lighten('#F6CE00', 0.5),
   },
@@ -44,13 +47,32 @@ const ResultUniversity = () => (
             76% dos usuários aprovam esta universidade
           </RatingCountText>
         </UniversityInfo>
-        <UniversityInfo>
-          Localização
+        <UniversityInfo categories>
+          <RatingCategory>Localização</RatingCategory>
           <BorderLinearProgress
             variant="determinate"
             color="secondary"
-            value={70}
+            value={85}
           />
+
+          <RatingCategory>Corpo docente</RatingCategory>
+          <BorderLinearProgress
+            variant="determinate"
+            color="secondary"
+            value={50}
+          />
+
+          <RatingCategory>Mensalidade</RatingCategory>
+          <BorderLinearProgress
+            variant="determinate"
+            color="secondary"
+            value={75}
+          />
+        </UniversityInfo>
+
+        <UniversityInfo detail>
+          <ViewUniversityDetail>veja mais</ViewUniversityDetail>
+          <ArrowLinkDetail />
         </UniversityInfo>
       </ItemUniversity>
     </ContainerUniversities>

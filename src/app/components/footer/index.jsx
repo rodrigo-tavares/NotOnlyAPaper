@@ -19,7 +19,7 @@ const Footer = () => (
       </NavLink>
     </ul>
     <ul className="copyright">
-      <li>© Copyright 2020</li>
+      <li>© Copyright {new Date().getFullYear()}</li>
       <li>NotOnlyAPaper</li>
       <li>Todos direitos reservados</li>
     </ul>
